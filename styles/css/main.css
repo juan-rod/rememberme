@@ -1,3 +1,208 @@
+@import url("https://fonts.googleapis.com/css?family=Cedarville+Cursive|Dancing+Script");
+.navMenu {
+  background-color: red;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  height: 100px;
+  padding: 20px 3%;
+  background-color: transparent;
+  z-index: 10; }
+  .navMenu .navMenu_logo {
+    width: 250px;
+    display: inline-block;
+    float: left;
+    height: 58px;
+    font-family: "Dancing Script", cursive; }
+    .navMenu .navMenu_logo a {
+      text-decoration: none;
+      color: white; }
+      .navMenu .navMenu_logo a h1 {
+        opacity: 0; }
+  .navMenu nav ul {
+    list-style: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0; }
+    .navMenu nav ul li {
+      display: inline;
+      font-size: 18px;
+      /*font-size: 24px;*/
+      text-shadow: 1px 1px 8px black; }
+      .navMenu nav ul li a {
+        /*display: block;*/
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none; }
+  .navMenu .pull-left {
+    float: left; }
+    .navMenu .pull-left .navMenu_categories li {
+      display: inline-block;
+      vertical-align: middle; }
+  .navMenu .pull-right {
+    float: right; }
+    .navMenu .pull-right .navMenu_options {
+      text-align: right; }
 
+.mainHeader {
+  /*background-color:blue;*/
+  height: 40vh;
+  min-height: 400px;
+  max-height: 600px;
+  padding: 0 0;
+  overflow: hidden;
+  /*margin-top: 35px;*/
+  top: 0;
+  position: absolute;
+  /*    .inner_topic{
+      	position: absolute;
+      	top: 120;
+  	    bottom: 0;
+  	    left: 50;
+  	    right: 0;
+  	    padding-top: 30px;
+  
+      	h1{
+      		line-height: 1.25;
+      		letter-spacing: 2.5;
+      	}
+      	h4{
+      		letter-spacing: 6;
+      		margin-top: 20px;
+      	}
+      }
+      .inner_topic_button{
+      	position: absolute;
+  	    top: 325;
+  	    bottom: 0;
+  	    left: 50;
+  	    right: 0;
+  	    button{
+  	    	height: 35px;
+  		    border-radius: 5px;
+  		    width: 150px;
+  	    }
+      }*/ }
+  .mainHeader img {
+    height: auto;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%; }
+  .mainHeader .logo {
+    display: inline-block;
+    float: left;
+    height: h1;
+    font-family: "Dancing Script", cursive;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-left: 20px;
+    color: white; }
+    .mainHeader .logo h1 {
+      font-size: 100px;
+      text-shadow: 1px 1px 8px black; }
+
+.mainBody {
+  height: 550px;
+  padding: 0;
+  position: absolute;
+  top: 60%; }
+  .mainBody .bodyHeader {
+    display: inline;
+    padding: 0 0 0 50;
+    margin-top: 15px; }
+    .mainBody .bodyHeader .h2 {
+      font-size: 30px;
+      letter-spacing: 3; }
+    .mainBody .bodyHeader a {
+      text-decoration: none;
+      color: black; }
+      .mainBody .bodyHeader a:hover {
+        outline: none; }
+  .mainBody .item {
+    height: 450px;
+    margin-top: 20px; }
+    .mainBody .item .product_image {
+      height: auto;
+      width: 100%; }
+    .mainBody .item .product_name {
+      text-align: center; }
+    .mainBody .item .product_detail {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: auto;
+      width: 100%;
+      max-height: 400px;
+      padding: 50% 15 0 15;
+      opacity: 0;
+      /* &:hover{
+       	opacity:1;
+       }*/ }
+      .mainBody .item .product_detail .product_sizes {
+        height: 35px;
+        margin-top: 100px; }
+        .mainBody .item .product_detail .product_sizes ul {
+          list-style: none;
+          position: relative;
+          margin: 0;
+          padding: 0;
+          margin-bottom: 0;
+          height: 100%;
+          padding: 0 15; }
+          .mainBody .item .product_detail .product_sizes ul li {
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 50%;
+            height: 35px;
+            width: 35px;
+            text-align: center;
+            line-height: 1.9;
+            border: 1px solid black;
+            margin: 0 5; }
+            .mainBody .item .product_detail .product_sizes ul li a {
+              /*display: block;*/
+              color: black;
+              text-align: center;
+              /*padding: 14px 16px;*/
+              text-decoration: none; }
+      .mainBody .item .product_detail .product-btn_quicklook {
+        width: 80%;
+        margin-left: 10%; }
+      .mainBody .item .product_detail .product-btn_addtocart {
+        width: 100%;
+        height: 50px; }
+
+body {
+  background-color: white;
+  font-family: "Cedarville Cursive", cursive, cursive;
+  color: black;
+  height: auto;
+  /*overflow: hidden;*/ }
+
+::-webkit-scrollbar {
+  display: none; }
+
+/*//////////////////////////////////////*/
+/*///// borders /////// */
+.border {
+  border: 2px dotted black; }
+
+.border2 {
+  border: 2px solid red; }
+
+.border3 {
+  border: 2px solid yellow; }
+
+.border4 {
+  border: 2px solid white; }
+
+.border5 {
+  border: 2px solid red; }
 
 /*# sourceMappingURL=main.css.map */
