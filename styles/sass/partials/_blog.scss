@@ -1,0 +1,74 @@
+.blogDiv{
+  padding: 20 15;
+  overflow-y: scroll;
+
+	.blogCard{
+	  height:300px;
+	  margin-bottom: 20px;
+	  background-color: #eee;
+	  box-shadow: 0px 5px 44px -20px rgba(0, 0, 0, 0.51);
+	  overflow: hidden;
+	  transition: height 500ms linear;
+
+	}
+	.blogTitle{
+	  height: 32%;
+	  max-height: 96px;
+	  border-bottom: 1px solid #87CEEB;
+		  h1{
+		  	margin-top: 10px;
+		  	text-align: center;
+		  }
+	}
+	.blogDate{
+		/*height: 25%;*/
+		position: absolute;
+		top: 76;
+		right: 0;
+		height: 35px;
+		background-color: #C7C2C2;
+		z-index: 1;
+    	border-radius: 2px;
+    	max-width: 200px;
+			h4{
+				font-weight:300;
+				text-align: right;
+			}
+	}
+
+	.blogContent{
+		height: auto;
+		line-height: 1.8;
+	    padding: 30 20;
+	    font-size: 16px;
+	    overflow: hidden;
+	    p{
+	    	height:auto;
+	    }
+	}
+	.heightAuto{
+		height: auto;
+		transition: height 500ms linear;
+	}
+	.expand-btn{
+		position: absolute;
+	    bottom: 0;
+	    right: 0;
+	    z-index: 1;
+	    border: none;
+    	background-color: transparent;
+    	color:#87CEEB;
+
+    	&:hover{
+    		font-size: 18px;
+    	}
+    	&:focus{
+    		border:none;
+			outline:none;
+			box-shadow: none;
+    	}
+
+
+
+	}
+}

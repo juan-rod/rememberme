@@ -15,11 +15,28 @@
   <body>
     <div ng-view></div>
 
+
+<!-- <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script> -->
+<script src="lib/bower_components/firebase/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDA_iang1AOjaprtSCZAWbQo6ULmopGKqc",
+    authDomain: "rememberme-4b338.firebaseapp.com",
+    databaseURL: "https://rememberme-4b338.firebaseio.com",
+    storageBucket: "rememberme-4b338.appspot.com",
+    messagingSenderId: "453433540913"
+  };
+  firebase.initializeApp(config);
+  
+</script>
+
     <script src="lib/bower_components/angular/angular.min.js"></script>
     <script src="lib/bower_components/angular-route/angular-route.min.js"></script>
     <script src="lib/bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
     <script src="lib/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="lib/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="lib/bower_components/angularfire/dist/angularfire.js"></script>
 
     <script src="data/app.js"></script>
     <script src="data/controllers/main.controller.js"></script>
@@ -28,10 +45,14 @@
     <script src="data/controllers/mainnavbar.controller.js"></script>
     <script src="data/controllers/shopnav.controller.js"></script>
     <script src="data/controllers/blognav.controller.js"></script>
+    <script src="data/controllers/blog.controller.js"></script>
+    <script src="data/controllers/admin/admin.controller.js"></script>
+    <script src="data/controllers/collectionpreview.controller.js"></script>
     <script src="data/directives/mainBody.directive.js"></script>
     <script src="data/directives/mainHeader.directive.js"></script>
     <script src="data/directives/mainnav.directive.js"></script>
     <script src="data/directives/blognav.directive.js"></script>
     <script src="data/directives/shopnav.directive.js"></script>
+    <script src="data/directives/collectionpreview.directive.js"></script>
   </body>
 </html>

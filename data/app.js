@@ -4,6 +4,15 @@
 		       templateUrl : "data/partials/home.html",
 		       controller : "MainController"
 		    })
+		    .when('/blog',{
+		       templateUrl : "data/partials/blog.html"
+		    })
+		     .when('/admin',{
+		      templateUrl : "data/partials/admin/admin.login.html"
+		    })
+		    .when('/adminConsole/',{
+		      templateUrl : "data/partials/admin/admin.console.html"
+		    })
 		    .otherwise({
 		      redirectTo: '/home'
 		    });
@@ -11,5 +20,5 @@
 
 
 angular
-	.module('app',['ngRoute'])
+	.module('app',['ngRoute','firebase'])
 	.config(config);
