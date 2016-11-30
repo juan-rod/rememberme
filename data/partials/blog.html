@@ -1,8 +1,7 @@
 <main-nav-bar></main-nav-bar>
 <main-header></main-header>
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 blogDiv" ng-controller="BlogController as bPosts">
-	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 blogCard" ng-repeat="item in bPosts.blog">
-		<!-- <pre>{{item}}</pre> -->
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 blogDiv" ng-controller="BlogController">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 blogCard" ng-repeat="item in blog">
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 blogTitle">
 					<h1>{{item.title}}</h1>
