@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Cedarville+Cursive|Dancing+Script");
+@import url("https://fonts.googleapis.com/css?family=Cedarville+Cursive|Dancing+Script|Open+Sans:300i,400");
 .navMenu {
   background-color: red;
   height: 100px;
@@ -92,14 +92,14 @@
     background-repeat: no-repeat;
     background-position: 50% 50%; }
   .mainHeader .logo {
-    display: inline-block;
+    /*display: inline-block;
     float: left;
-    height: h1;
+    height: ;*/
     font-family: "Dancing Script", cursive;
     position: absolute;
+    width: 100%;
     bottom: 0;
-    left: 0;
-    padding-left: 20px;
+    text-align: center;
     color: white; }
     .mainHeader .logo h1 {
       font-size: 100px;
@@ -179,14 +179,18 @@
         height: 50px; }
 
 .blogDiv {
-  padding: 20 15;
-  overflow-y: scroll; }
+  padding: 20px 15px;
+  overflow-y: scroll;
+  position: relative;
+  top: 450px; }
   .blogDiv .blogCard {
-    height: 300px;
+    height: auto;
+    min-height: 300px;
     margin-bottom: 20px;
     background-color: #eee;
     box-shadow: 0px 5px 44px -20px rgba(0, 0, 0, 0.51);
     overflow: hidden;
+    padding: 20px 50px;
     transition: height 500ms linear; }
   .blogDiv .blogTitle {
     height: 32%;
@@ -209,9 +213,12 @@
       font-weight: 300;
       text-align: right; }
   .blogDiv .blogContent {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-style: italic;
     height: auto;
     line-height: 1.8;
-    padding: 30 20;
+    padding: 30px 20px;
     font-size: 16px;
     overflow: hidden; }
     .blogDiv .blogContent p {

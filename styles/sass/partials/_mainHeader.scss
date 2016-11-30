@@ -16,14 +16,14 @@
         background-position: 50% 50%;
     }
     .logo{
-        display: inline-block;
+        /*display: inline-block;
         float: left;
-        height: h1;
+        height: ;*/
         font-family: $font-stack-dancing;
         position: absolute;
+        width: 100%;
         bottom: 0;
-        left: 0;
-        padding-left: 20px;
+        text-align: center;
         color: white;
         h1{
             font-size: 100px;
