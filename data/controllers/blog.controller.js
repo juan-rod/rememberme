@@ -2,13 +2,12 @@ function BlogController($scope,firebase, $timeout, $firebaseObject, $firebaseArr
 	$scope.blog=[];
 
 	var ref = firebase.database().ref().child("blog-posts");
-	console.log("ref",ref);
-  // create a synchronized array
-  // click on `index.html` above to see it used in the DOM!
-  $scope.blog = $firebaseArray(ref);
+
+ 
+  	$scope.blog = $firebaseArray(ref);
 	
 	
-			    console.log("$scope.blog:",$scope.blog);
+			    
 		
 	// }
 	// function blogData(){ 

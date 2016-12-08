@@ -1,5 +1,5 @@
 
-function blog() {
+function blogPost() {
 	return{
 		restrict: 'E',
 		templateUrl: "data/partials/blog.html",
@@ -10,4 +10,4 @@ function blog() {
 
 angular
 	.module('app')
-	.directive('blog', blog);
+	.directive('blogPost', blogPost);

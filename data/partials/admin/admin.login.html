@@ -1,10 +1,10 @@
 <div class="login-page" ng-controller="AdminController as adminLogin">
-  <div class="form" ng-hide="identity.isAuthenticated()">
-    <form class="login-form" ng-show="!createAccount">
-      <input type="text" placeholder="email" ng-model="email"/>
-      <input type="password" placeholder="password" ng-model="password"/>
+  <div class="form " ng-hide="identity.isAuthenticated()">
+    <form class="login-form " ng-show="!createAccount">
+      <input type="text" class="loginInput" placeholder="Email" ng-model="email"/>
+      <input type="password" class="loginInput" placeholder="Password" ng-model="password"/>
       <a href="">
-        <button ng-click="adminLogin.signIn(email, password)">Login</button>
+        <button class="loginBtn" ng-click="adminLogin.signIn(email, password)">Login</button>
       </a>
     </form>
   </div>

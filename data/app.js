@@ -5,7 +5,7 @@
 		       controller : "MainController"
 		    })
 		    .when('/blog',{
-		       templateUrl : "data/partials/blog.html"
+		       templateUrl : "data/partials/BlogNav.html"
 		    })
 		     .when('/admin',{
 		      templateUrl : "data/partials/admin/admin.login.html"
