@@ -1,0 +1,33 @@
+.aboutDiv{
+	font-family: $font-stack-open;
+	padding: 0 150px;
+	.letter{
+		padding: 35px 75px;
+    	text-align: justify;
+    	line-height: 1.75;
+    	box-shadow: 0px 5px 44px -20px rgba(0, 0, 0, 0.51);
+
+			p{
+				font-size: 20px;
+				text-indent: 30pt;
+			}
+			.sigDiv{
+				margin-top: 10%;
+				.signature{
+					font-size: 30px;
+					font-family: $font-stack-cedarville;
+					text-align: right;
+				}
+				
+			}
+
+		
+	}
+	img{
+		height: auto;
+		max-height: 240px;
+    	width: auto;
+    	border-radius: 50%;
+    	float:right;
+	}
+}

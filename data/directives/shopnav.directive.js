@@ -3,7 +3,7 @@ function shopNavBar() {
 	return{
 		restrict: 'E',
 		templateUrl: "data/partials/ShopNav.html",
-		controller: 'ShopNavController'
+		controller: 'ShopController'
 
 	};
 }

@@ -9,10 +9,25 @@
 		    })
 		     .when('/admin',{
 		      templateUrl : "data/partials/admin/admin.login.html"
+		    }) 
+		     .when('/about',{
+		      templateUrl : "data/partials/about.html"
 		    })
 		    .when('/adminConsole/',{
 		      templateUrl : "data/partials/admin/admin.console.html"
 		    })
+		    .when('/shop', { 
+      			templateUrl: 'data/partials/shop/store.html',
+      			controller: ShopController 
+      		})
+    		.when('/products/:productSku', {
+      			templateUrl: 'data/partials/shop/product.html',
+      			controller: ShopController 
+      		})
+    		.when('/cart', { 
+      			templateUrl: 'data/partials/shop/shoppingCart.html',
+      			controller: ShopController 
+      		})
 		    .otherwise({
 		      redirectTo: '/home'
 		    });
