@@ -179,10 +179,10 @@
         height: 50px; }
 
 .blogDiv {
-  padding: 20px 15px;
+  /*padding: 20px 15px;*/
+  padding: 0 150px;
   overflow-y: scroll;
-  position: relative;
-  top: 450px; }
+  position: relative; }
   .blogDiv .blogCard {
     height: auto;
     min-height: 300px;
@@ -190,8 +190,11 @@
     background-color: #eee;
     box-shadow: 0px 5px 44px -20px rgba(0, 0, 0, 0.51);
     overflow: hidden;
-    padding: 20px 50px;
-    transition: height 500ms linear; }
+    /*padding: 20px 50px;*/
+    transition: height 500ms linear;
+    padding: 35px 75px;
+    text-align: justify;
+    line-height: 1.75; }
   .blogDiv .blogTitle {
     height: 32%;
     max-height: 96px;
@@ -215,14 +218,15 @@
   .blogDiv .blogContent {
     font-family: "Open Sans", sans-serif;
     font-weight: 300;
-    font-style: italic;
+    /*font-style: italic;*/
     height: auto;
     line-height: 1.8;
     padding: 30px 20px;
-    font-size: 16px;
+    font-size: 18px;
     overflow: hidden; }
     .blogDiv .blogContent p {
-      height: auto; }
+      height: auto;
+      text-indent: 30pt; }
   .blogDiv .heightAuto {
     height: auto;
     transition: height 500ms linear; }
@@ -335,14 +339,41 @@
 
 .store {
   font-family: "Open Sans", sans-serif;
-  position: relative;
-  top: 150px; }
+  position: relative; }
+  .store .bodyHeader {
+    background-color: #eee;
+    padding-top: 20px;
+    position: relative; }
+    .store .bodyHeader .headerTitle {
+      font-size: 32px; }
+    .store .bodyHeader .headerItemCount {
+      position: relative;
+      top: 18px;
+      left: 0;
+      text-align: right; }
+    .store .bodyHeader .headerSearch {
+      position: relative;
+      top: 15px;
+      left: 0;
+      text-align: right; }
+      .store .bodyHeader .headerSearch input {
+        width: 75%; }
   .store .itemDiv .productDiv {
-    box-shadow: 0px 5px 44px -20px rgba(0, 0, 0, 0.51);
-    padding: 20px; }
+    /*box-shadow: 0px 5px 44px -20px rgba(0, 0, 0, 0.51);*/
+    box-shadow: 1px 14px 64px -20px rgba(0, 0, 0, 0.21);
+    padding: 20px 10px;
+    margin-bottom: 20px;
+    margin-top: 10px; }
     .store .itemDiv .productDiv img {
       height: auto;
       width: 100%; }
+    .store .itemDiv .productDiv .product_name {
+      text-align: center; }
+      .store .itemDiv .productDiv .product_name a {
+        text-decoration: none;
+        color: #000; }
+        .store .itemDiv .productDiv .product_name a:hover {
+          color: #505050; }
 
 .text-info {
   font-family: "Open Sans", sans-serif; }

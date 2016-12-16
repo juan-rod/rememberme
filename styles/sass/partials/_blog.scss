@@ -1,8 +1,8 @@
 .blogDiv{
-	padding: 20px 15px;
+	/*padding: 20px 15px;*/
+	padding: 0 150px;
 	overflow-y: scroll;
 	position: relative;
-	top: 450px;
 
 	.blogCard{
 	  height:auto;
@@ -11,8 +11,11 @@
 	  background-color: #eee;
 	  box-shadow: 0px 5px 44px -20px rgba(0, 0, 0, 0.51);
 	  overflow: hidden;
-	  padding: 20px 50px;
+	  /*padding: 20px 50px;*/
 	  transition: height 500ms linear;
+	  	padding: 35px 75px;
+    	text-align: justify;
+    	line-height: 1.75;
 
 	}
 	.blogTitle{
@@ -43,14 +46,15 @@
 	.blogContent{
 		font-family: $font-stack-open;
 		font-weight: 300;
-		font-style: italic;
+		/*font-style: italic;*/
 		height: auto;
 		line-height: 1.8;
 	    padding: 30px 20px;
-	    font-size: 16px;
+	    font-size: 18px;
 	    overflow: hidden;
 	    p{
 	    	height:auto;
+	    	text-indent: 30pt;
 	    }
 	}
 	.heightAuto{
