@@ -1,0 +1,58 @@
+
+<div class="addProductDiv" ng-controller="AdminController as vm">
+	<h2>Add A New Product</h2>
+  	<form role="form" class="adminAddProduct border">
+    	<h3>Product Title</h3>
+    		<div class="form-group">
+		      <div class="input-group col-xs-4">
+		        <div class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></div>
+		        <input type="text" class="form-control" placeholder="Product Name" ng-model="pTitle">
+		      </div>
+		    </div>
+		<hr />
+		<h3>Product Description</h3>
+    		<div class="form-group">
+		      <div class="input-group col-xs-4">
+		        <div class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></div>
+		        <textarea type="text" placeholder="Product Description" ng-model="pDescription">
+
+		        </textarea>
+		      </div>
+		    </div> 
+		<hr />
+		<h3>Product Description</h3>
+    		<div class="form-group">
+		      <div class="input-group col-xs-4">
+		        <div class="input-group-addon"><span class="glyphicon glyphicon-usd"></span></div>
+		        <input type="text" class="form-control" placeholder="Product Price" ng-model="pPrice">
+		      </div>
+		    </div> 
+		<hr />
+    	<h3>Product Image</h3>
+		    <div class="form-group">
+		      <div class="input-group col-xs-4">
+		        <div class="input-group-addon"><span class="glyphicon glyphicon-picture"></span></div>
+		        <input type="file" class="form-control" value="upload" id="imageFile" ng-model="image" accept="image/*" multiple="" custom-on-change="vm.image">
+		        
+		      </div>
+		    </div>
+    	<hr />
+		<!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 adminAddProductButton border">
+			 <button class="btn btn-primary" ng-click="adminConsole.uploadImage(pTitle, pDescription)"ng-disabled="!pTitle || !pDescription">Submit</button> 
+		</div> -->
+
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 showUploadedDiv border2" ng-repeat="image in vm.images | orderBy: '-date'">
+	    	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 showUploadedImg border3" >
+		        <img ng-src="{{image.url}}">
+		        <h4>{{image.title}}</h4>
+		        <h5>{{image.desc}}</h5>
+		        <h5>{{image.price | currency}}</h5>
+		        <h6>{{image.date}}</h6>
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 showUploadedDelBtn">
+					<a class="btn btn-danger btn-block" ng-click="vm.deleteImg(image.$id)">Delete</a>
+				</div>
+	    	</div>
+    	</div>
+
+   	</form>
+</div>

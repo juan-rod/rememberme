@@ -18,7 +18,7 @@ function DataService() {
   });
   return {
     getStore: myStore,
-    cart: myCart
+    getCart: myCart
   };
 
 }

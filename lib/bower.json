@@ -19,6 +19,7 @@
     "angular-route": "~1.4.4",
     "angular-bootstrap": "~1.1.2",
     "angularfire": "^2.0.1",
-    "firebase": "^3.0.4"
+    "firebase": "^3.0.4",
+    "sweetalert": "^1.1.3"
   }
 }

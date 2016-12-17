@@ -17,17 +17,20 @@
 
    </div> 
   </div>
-  <div 
+  <!-- <div 
     class="col-lg-3 col-md-3 col-sm-3 col-xs-12 itemDiv " 
-    ng-repeat="product in store.products | orderBy:'name' | filter:search">
+    ng-repeat="product in store.products | orderBy:'name' | filter:search"> -->
+    <div
+        class="col-lg-3 col-md-3 col-sm-3 col-xs-12 itemDiv" 
+        ng-repeat="item in store | orderBy:'name' | filter:search">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 productDiv ">
-      <img class="product_image" src="./data/images/product/product_1.jpg">
+      <img class="product_image" src="{{item.url}}">
       <div class="product_name">
          <a href="#/products/{{product.sku}}">
-          <h4>{{product.name}}</h4>
-          <h5>{{product.description}}</h5>
+          <h4>{{item.title}}</h4>
+          <h5>{{item.desc}}</h5>
          </a>
-        <h5><b>{{product.price | currency}}</b></h5>
+        <h5><b>{{item.price | currency}}</b></h5>
       </div>
       <div class="product_detail ">
         <!-- <div class=""> -->
