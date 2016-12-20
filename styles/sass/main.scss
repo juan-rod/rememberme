@@ -1,15 +1,17 @@
 @import "partials/base";
 @import "partials/navBar";
 @import "partials/mainHeader";
+@import "partials/hmainHeader";
 @import "partials/mainBody";
 @import "partials/blog";
 @import "partials/admin";
 @import "partials/store";
 @import "partials/about";
+@import "partials/shopMenu";
 
 body{
 	background-color: $bg-color;
-  	font-family: $font-stack-cedarville, cursive;
+  	font-family: $font-stack-roboto, sans-serif;
   	color: $text-color;
   	height: auto; 
   	/*overflow: hidden;*/
