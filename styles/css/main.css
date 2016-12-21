@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Cedarville+Cursive|Dancing+Script|Open+Sans:300i,400|Roboto:300,400");
 .navMenu {
-  background-color: red;
-  height: 100px;
   position: fixed;
   top: 0;
-  height: 100px;
-  padding: 20px 3%;
+  height: auto;
+  min-height: 8vh;
+  max-height: 8vh;
+  padding: 20px 3% 0;
   background-color: transparent;
   z-index: 10; }
   .navMenu .navMenu_logo {
@@ -13,12 +13,13 @@
     display: inline-block;
     float: left;
     height: 58px;
-    font-family: "Dancing Script", cursive; }
+    font-family: "Roboto", sans-serif; }
     .navMenu .navMenu_logo a {
       text-decoration: none;
       color: white; }
       .navMenu .navMenu_logo a h1 {
-        opacity: 0; }
+        opacity: 1;
+        margin-top: 0px; }
   .navMenu nav ul {
     list-style: none;
     position: relative;
@@ -30,6 +31,8 @@
       font-size: 18px;
       /*font-size: 24px;*/
       text-shadow: 1px 1px 8px black; }
+      .navMenu nav ul li hr {
+        display: inline-block; }
       .navMenu nav ul li a {
         /*display: block;*/
         color: white;
@@ -92,18 +95,16 @@
   opacity: 1; }
 
 .mainHeader {
-  /*background-color:blue;*/
-  height: 40vh;
-  min-height: 400px;
-  max-height: 600px;
+  height: auto;
+  min-height: 8vh;
+  max-height: 8vh;
   padding: 0 0;
   overflow: hidden;
-  /*margin-top: 35px;*/
-  top: -20px;
-  position: relative;
-  box-shadow: 0px 5px 10px 0px rgba(5, 5, 5, 0.23);
-  -moz-box-shadow: 0px 5px 10px 0px rgba(5, 5, 5, 0.23);
-  -webkit-box-shadow: 0px 5px 10px 0px rgba(5, 5, 5, 0.23); }
+  position: fixed;
+  z-index: 2;
+  box-shadow: 0px 3px 8px 0px rgba(5, 5, 5, 0.23);
+  -moz-box-shadow: 0px 3px 8px 0px rgba(5, 5, 5, 0.23);
+  -webkit-box-shadow: 0px 3px 8px 0px rgba(5, 5, 5, 0.23); }
   .mainHeader img {
     height: auto;
     width: 100%;
@@ -114,20 +115,27 @@
     /*display: inline-block;
     float: left;
     height: ;*/
-    font-family: "Dancing Script", cursive;
+    font-family: "Roboto", sans-serif;
     position: absolute;
     width: 100%;
-    bottom: 0;
+    bottom: 75px;
     text-align: center;
-    color: white; }
+    color: white;
+    padding-top: 15%;
+    background-color: rgba(179, 177, 177, 0.35);
+    /* h1{
+         font-size: 100px;
+         text-shadow: 1px 1px 8px rgb(0, 0, 0);
+     }*/ }
     .mainHeader .logo h1 {
+      font-weight: 300;
       font-size: 100px;
-      text-shadow: 1px 1px 8px black; }
+      text-shadow: 3px 3px 2px #444343; }
 
 .hmainHeader {
-  height: 80vh;
+  height: auto;
   min-height: 400px;
-  max-height: 600px;
+  max-height: 75vh;
   padding: 0 0;
   overflow: hidden;
   top: -20px;
@@ -168,6 +176,7 @@
     .hmain-nav .hmain-navDiv .hmain-navDivContent {
       height: 225px;
       width: 250px;
+      border-radius: 15px;
       background-color: rgba(96, 145, 144, 0.95);
       padding-top: 15%;
       box-shadow: 0px 4px 28px -4px rgba(0, 0, 0, 0.75);
@@ -260,7 +269,7 @@
 
 .blogDiv {
   /*padding: 20px 15px;*/
-  padding: 0 150px;
+  padding: 100px 150px;
   overflow-y: scroll;
   position: relative; }
   .blogDiv .blogCard {
@@ -445,30 +454,8 @@
 
 .store {
   font-family: "Open Sans", sans-serif;
-  position: relative; }
-  .store .bodyHeader {
-    background-color: #eee;
-    /*padding-top: 20px;*/
-    position: relative;
-    height: 75px;
-    z-index: -1;
-    top: -50px; }
-    .store .bodyHeader .headerTitle {
-      font-size: 32px;
-      position: absolute;
-      bottom: 0; }
-    .store .bodyHeader .headerItemCount {
-      position: relative;
-      top: 18px;
-      left: 0;
-      text-align: right; }
-    .store .bodyHeader .headerSearch {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      text-align: right; }
-      .store .bodyHeader .headerSearch input {
-        width: 75%; }
+  position: absolute;
+  top: 150px; }
   .store .itemDiv {
     height: auto;
     max-height: 325px;
@@ -500,7 +487,8 @@
       	    	}*/ }
       .store .itemDiv .productDiv img {
         height: auto;
-        width: 100%; }
+        width: 100%;
+        border-radius: 15px; }
       .store .itemDiv .productDiv .product_name {
         font-family: "Roboto", sans-serif;
         text-align: center;
@@ -510,7 +498,7 @@
         left: 0;
         right: 0;
         margin: auto;
-        z-index: 100;
+        z-index: 6;
         padding-top: 15%;
         height: 100%;
         background-color: rgba(254, 254, 254, 0.85); }
@@ -536,7 +524,7 @@ table {
 
 .aboutDiv {
   font-family: "Open Sans", sans-serif;
-  padding: 0 150px; }
+  padding: 100px 150px; }
   .aboutDiv .letter {
     padding: 35px 75px;
     text-align: justify;
@@ -559,30 +547,46 @@ table {
     float: right; }
 
 .shopMenu {
-  position: absolute;
-  bottom: 0;
+  position: fixed;
+  top: 18px;
   right: 0;
   left: 0;
   padding: 0;
-  margin: auto; }
+  margin: auto;
+  height: 75px;
+  background-color: #eee;
+  z-index: 1; }
   .shopMenu ul {
     list-style: none;
-    position: relative;
+    position: absolute;
     margin: 0;
-    padding: 0;
-    margin-bottom: 0; }
+    padding: 0 3%;
+    margin-bottom: 0;
+    bottom: 5px;
+    right: 0; }
     .shopMenu ul li {
       display: inline;
-      font-size: 18px; }
+      font-size: 14px; }
       .shopMenu ul li:hover {
-        font-size: 20px;
-        /*text-shadow:1px 1px 5px rgb(168, 171, 169);*/ }
+        text-shadow: 1px 1px 8px #a8aba9;
+        transition: all .4s; }
       .shopMenu ul li a {
         /*display: block;*/
         color: #616060;
         text-align: center;
         padding: 0 16px;
         text-decoration: none; }
+  .shopMenu .headerSearch {
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 3%;
+    height: auto; }
+    .shopMenu .headerSearch input {
+      width: 75%;
+      position: absolute;
+      bottom: 1px; }
 
 body {
   background-color: white;

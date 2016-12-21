@@ -1,24 +1,26 @@
 .navMenu{
-	background-color: red;
-	height: 100px;
 	position: fixed;
-    top: 0;
-    height: 100px;
-    padding: 20px 3%;
-    background-color: transparent;
-    z-index: 10;
+  top: 0;
+  height: auto;
+  min-height: 8vh;
+  max-height: 8vh;
+  padding: 20px 3% 0;
+  background-color: transparent;
+  z-index: 10;
 
 	.navMenu_logo{
 		width: 250px;
     	display: inline-block;
     	float: left;
     	height: 58px;
-    	font-family: $font-stack-dancing;
+    	font-family: $font-stack-roboto;
     	a{
     		text-decoration: none;
     		color: white;
     		h1{
-    			opacity: 0;
+    			opacity: 1;
+          margin-top: 0px;
+
     		}
     	}
 	}
@@ -35,6 +37,10 @@
     			font-size: 18px;
     			/*font-size: 24px;*/
     			text-shadow: 1px 1px 8px rgb(0, 0, 0);
+
+          hr{
+            display: inline-block;
+          }
     			a{
     				/*display: block;*/
     				color: white;

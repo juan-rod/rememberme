@@ -1,7 +1,7 @@
 .hmainHeader{
-	height: 80vh;
+	height: auto;
     min-height: 400px;
-    max-height: 600px;
+    max-height: 75vh;
     padding: 0 0;
     overflow: hidden;
     top: -20px;
@@ -45,6 +45,7 @@
         .hmain-navDivContent{
             height: 225px;
             width: 250px; 
+            border-radius:15px;
             background-color:rgba(96, 145, 144, 0.95); 
             padding-top:15%;
             box-shadow: 0px 4px 28px -4px rgba(0,0,0,0.75);

@@ -1,22 +1,28 @@
 .shopMenu{
-	position: absolute;
-    bottom: 0;
+	position: fixed;
+    top: 18px;
     right: 0;
     left: 0;
     padding: 0;
     margin: auto;
+    height: 75px;
+    background-color:#eee;
+    z-index: 1;
 	ul{
 		list-style: none;
-		position: relative;
+		position: absolute;
 		margin: 0;
-		padding: 0;
+		padding: 0 3%;
 		margin-bottom: 0;
+		bottom:5px;
+		right: 0;
+
 		li{
 			display: inline;
-			font-size: 18px;
+			font-size: 14px;
 			&:hover{
-				font-size:20px;
-				/*text-shadow:1px 1px 5px rgb(168, 171, 169);*/
+				text-shadow:1px 1px 8px rgb(168, 171, 169);
+				transition: all .4s;
 			};
 			a{
 				/*display: block;*/
@@ -26,6 +32,19 @@
 				text-decoration: none;
 			}
 		}
+	}
+	.headerSearch{
+		text-align: left;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		padding: 0 3%;
+		height: auto;
+	    input{
+	    	width:75%;
+	    	position: absolute;
+	    	bottom: 1px;
+	    }
 	}
 
 	.shopMenu_categories{

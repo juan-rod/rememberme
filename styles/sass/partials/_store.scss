@@ -1,36 +1,9 @@
 .store{
 	font-family: $font-stack-open;
-	position: relative;
+	position: absolute;
+	top: 150px;
 
-	.bodyHeader{
-		background-color: #eee;
-		/*padding-top: 20px;*/
-		position: relative;
-		height: 75px;
-    	z-index: -1;
-    	top: -50px;
 
-		.headerTitle{
-			font-size: 32px;
-			position: absolute;
-    		bottom: 0;
-		}
-		.headerItemCount{
-			position: relative;
-		    top: 18px;
-		    left: 0;
-		    text-align: right;
-		}
-		.headerSearch{
-			    position: absolute;
-    			bottom: 0;
-    			right: 0;
-    			text-align: right;
-		    input{
-		    	width:75%;
-		    }
-		}
-	}
     .itemDiv{
     	height:auto;
     	max-height: 325px;
@@ -48,6 +21,7 @@
 	    	img{
 		    	height: auto;
 		    	width: 100%;
+		    	border-radius:15px;
 	    	}
 	    	.product_name{
 	    		font-family: $font-stack-roboto;
@@ -58,7 +32,7 @@
 			    left: 0;
 			    right: 0;
 			    margin: auto;
-			    z-index: 100;
+			    z-index: 6;
 			    padding-top:15%;
 			    height: 100%;
 			    background-color: rgba(254, 254, 254, 0.85);
