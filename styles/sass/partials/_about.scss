@@ -1,6 +1,8 @@
 .aboutDiv{
 	font-family: $font-stack-open;
 	padding: 100px 150px;
+	position: absolute;
+	top: 12vh;
 	.letter{
 		padding: 35px 75px;
     	text-align: justify;

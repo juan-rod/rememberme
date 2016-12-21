@@ -1,7 +1,7 @@
 	function config($routeProvider){
 		$routeProvider
 		    .when('/home',{
-		       templateUrl : "data/partials/home.html",
+		       templateUrl : "data/partials/home2.html",
 		       controller : "MainController"
 		    })
 		    .when('/blog',{
