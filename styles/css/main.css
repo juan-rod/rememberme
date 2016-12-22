@@ -523,6 +523,7 @@
   top: 150px; }
   .store .itemDiv {
     height: auto;
+    min-height: 325px;
     max-height: 325px;
     margin: 0 0 40px; }
     .store .itemDiv .productDiv {
@@ -550,10 +551,13 @@
       		    		opacity:1;
       		    	}
       	    	}*/ }
+      .store .itemDiv .productDiv a {
+        text-decoration: none;
+        color: #000; }
       .store .itemDiv .productDiv img {
         height: auto;
         width: 100%;
-        border-radius: 6px; }
+        border-radius: 3px; }
       .store .itemDiv .productDiv .product_name {
         font-family: "Roboto", sans-serif;
         text-align: center;
@@ -563,7 +567,8 @@
         left: 0;
         right: 0;
         margin: auto;
-        z-index: 6;
+        color: black;
+        /*z-index: 6;*/
         padding-top: 15%;
         height: 100%;
         background-color: rgba(254, 254, 254, 0.85); }
@@ -576,10 +581,26 @@
           .store .itemDiv .productDiv .product_name a h4 {
             margin-bottom: 20px; }
         .store .itemDiv .productDiv .product_name:hover {
+          /*z-index: 7;*/
           opacity: 1;
           cursor: pointer;
           box-shadow: 1px 14px 64px -20px rgba(0, 0, 0, 0.21);
           transition: opacity .5s,box-shadow .3s; }
+          .store .itemDiv .productDiv .product_name:hover .u_product_name {
+            color: white; }
+      .store .itemDiv .productDiv .u_product_name {
+        /*z-index: 10;*/
+        margin-top: 10px;
+        /*&:hover{
+        	color:white;
+        };*/ }
+        .store .itemDiv .productDiv .u_product_name .u_product_title {
+          font-size: 14px;
+          padding: 0 6px; }
+        .store .itemDiv .productDiv .u_product_name .u_product_price {
+          font-size: 14px;
+          padding: 0 6px;
+          text-align: right; }
 
 .text-info {
   font-family: "Open Sans", sans-serif; }

@@ -3,17 +3,23 @@ function AdminController(firebase, $location, $scope, $firebaseArray) {
 	$scope.pTitle=[];
 	$scope.pDescription=[];
 	$scope.pPrice=[];
+	$scope.uTitle=[];
+	$scope.uDescription=[];
+	$scope.uPrice=[];
 	var storageService = firebase.storage();
     var ref = firebase.database().ref().child("product_images");
     var list = $firebaseArray(ref);
     this.images = list;
     this.deleteImg = deleteImg;
+    this.editProduct = editProduct;
+    this.updateProduct = updateProduct;
 
     this.image = function(event){
   		event.preventDefault();
     	var file = event.target.files[0];
   		uploadImage(file);
   	};
+  	
   	function uploadImage(file) {
       var random = parseInt(Math.random() * 1000000);
       var refStorage = storageService.ref('product_images').child(random.toString()).child(file.name);
@@ -44,8 +50,37 @@ function AdminController(firebase, $location, $scope, $firebaseArray) {
 		});
     }
 
+
+    function editProduct(id){
+    	var productInfo = list.$getRecord(id);
+    	console.log("productInfo:",productInfo);
+    	$scope.productToUpdate= productInfo;
+    	console.log("$scope.productToUpdate:",$scope.productToUpdate);
+
+    	$('#editModal').modal(); 
+    }
+
+    function updateProduct() {
+    	var productId = $scope.productToUpdate.$id;
+    	var getData = firebase.database().ref().child("product_images/"+ productId);
+
+    	var newProductInfo = {
+    		title: $scope.productToUpdate.title,
+	        desc: $scope.productToUpdate.desc,
+	        price: $scope.productToUpdate.price
+    	};
+    	getData.update(newProductInfo).then(function(ref){
+    		$('#editModal').modal('hide');
+    		swal("Edited!", "Your product information has been updated.", "success");
+    	}).catch(function(error) {
+          console.log('an error occurred!', error);
+        });
+    	
+    }
+
     function deleteImg(id) {
       var image = list.$getRecord(id);
+          	console.log("image", image);
 
       swal({
         title: "Are you sure?",
