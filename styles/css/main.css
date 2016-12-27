@@ -12,7 +12,23 @@
   background: url("../../data/images/headers/header_5.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 50% 50%; }
+  background-position: 50% 50%;
+  /*	.pull-left{
+  		float: left;
+  		.navMenu_categories{
+  			li{
+  				display: inline-block;
+  				vertical-align: middle;
+  			}
+  		}
+  
+  	}*/
+  /*.pull-right{
+  	float: right;
+  	.navMenu_options{
+  		text-align: right;
+  	}
+  }*/ }
   .navMenu .navMenu_cover {
     position: fixed;
     top: 0;
@@ -56,26 +72,27 @@
           color: white;
           text-align: center;
           padding: 14px 6px;
-          text-decoration: none; }
-        .navMenu nav ul li:hover {
-          color: white; }
-        .navMenu nav ul li:before {
-          content: "";
-          position: absolute;
-          width: 100%;
-          height: 2px;
-          bottom: 0;
-          left: 0;
-          background-color: white;
-          visibility: hidden;
-          -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-          -webkit-transition: all 0.3s ease-in-out 0s;
-          transition: all 0.3s ease-in-out 0s; }
-        .navMenu nav ul li:hover:before {
-          visibility: visible;
-          -webkit-transform: scaleX(1);
-          transform: scaleX(1); }
+          text-decoration: none;
+          /* &:hover{
+            color:white;
+          }*/ }
+          .navMenu nav ul li a:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: white;
+            visibility: hidden;
+            -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+            -webkit-transition: all 0.3s ease-in-out 0s;
+            transition: all 0.3s ease-in-out 0s; }
+          .navMenu nav ul li a:hover:before {
+            visibility: visible;
+            -webkit-transform: scaleX(1);
+            transform: scaleX(1); }
   .navMenu .navMenu_contact {
     position: absolute;
     right: 0;
@@ -96,15 +113,6 @@
           text-align: center;
           padding: 0 4px;
           text-decoration: none; }
-  .navMenu .pull-left {
-    float: left; }
-    .navMenu .pull-left .navMenu_categories li {
-      display: inline-block;
-      vertical-align: middle; }
-  .navMenu .pull-right {
-    float: right; }
-    .navMenu .pull-right .navMenu_options {
-      text-align: right; }
 
 .is-fixed {
   position: fixed;
@@ -586,8 +594,9 @@
           cursor: pointer;
           box-shadow: 1px 14px 64px -20px rgba(0, 0, 0, 0.21);
           transition: opacity .5s,box-shadow .3s; }
-          .store .itemDiv .productDiv .product_name:hover .u_product_name {
-            color: white; }
+      .store .itemDiv .productDiv .product_name:hover ~ .u_product_name {
+        background-color: transparent-;
+        color: white; }
       .store .itemDiv .productDiv .u_product_name {
         /*z-index: 10;*/
         margin-top: 10px;
@@ -679,7 +688,8 @@ table {
 .hmain-nav {
   height: auto;
   position: absolute;
-  top: 65vh; }
+  top: 65vh;
+  padding: 0 150px; }
   .hmain-nav .hmain-navDiv {
     height: auto;
     display: flex;
@@ -697,7 +707,7 @@ table {
           -moz-box-shadow: 0px 4px 28px -4px rgba(0,0,0,0.75);*/ }
       .hmain-nav .hmain-navDiv .hmain-navDivContent h1 {
         text-align: center;
-        font-size: 45px;
+        /*font-size: 45px;*/
         font-weight: 300;
         color: #000;
         /*text-shadow: 1px 1px 1px rgb(68, 67, 67);*/ }
@@ -724,6 +734,25 @@ table {
         visibility: visible;
         -webkit-transform: scaleX(1);
         transform: scaleX(1); }
+
+.modal-dialog {
+  width: 80vw; }
+  .modal-dialog .modal-content {
+    min-height: 80vh; }
+    .modal-dialog .modal-content .modal-header {
+      padding: 5px 10px; }
+    .modal-dialog .modal-content .modal-body {
+      height: 550px; }
+      .modal-dialog .modal-content .modal-body .imgDiv {
+        height: auto; }
+        .modal-dialog .modal-content .modal-body .imgDiv .displayImg {
+          height: 400px; }
+          .modal-dialog .modal-content .modal-body .imgDiv .displayImg img {
+            height: 100%; }
+        .modal-dialog .modal-content .modal-body .imgDiv .subImg {
+          height: 100px; }
+          .modal-dialog .modal-content .modal-body .imgDiv .subImg img {
+            height: 100%; }
 
 body {
   background-color: white;

@@ -59,12 +59,13 @@
 		    		cursor: pointer;
 	    			box-shadow: 1px 14px 64px -20px rgba(0, 0, 0, 0.21);
 		    		transition:opacity .5s,box-shadow .3s;
-		    		.u_product_name{
-		    			color:white;
-		    		}
 		    	}
 
 	    	}
+	    	.product_name:hover ~ .u_product_name {
+			    background-color: transparent-;
+			    color: white;
+			}
 	    	.u_product_name{
 	    		/*z-index: 10;*/
 	    		margin-top: 10px;

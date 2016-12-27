@@ -1,16 +1,32 @@
-function ShopController($scope, $routeParams, DataService, firebase, $firebaseArray) {
+function ShopController($scope, $routeParams, firebase, $firebaseArray) {
 	  // get store and cart from service
   // $scope.store = DataService.getStore;
-  $scope.cart = DataService.getCart;
+
+this.productModal = productModal;
+  // $scope.cart = DataService.getCart;
 
   $scope.store=[];
+  $scope.productInfo = [];
 
 	var ref = firebase.database().ref().child("product_images");
 
  
-  	$scope.store = $firebaseArray(ref);
+  $scope.store = $firebaseArray(ref);
 
-  // use routing to pick the selected product
+    function productModal(id){
+      $scope.productModal= $scope.store.$getRecord(id);
+       
+      console.log("productInfo", $scope.productModal);
+      console.log("productInfo title", $scope.productModal.title);
+      console.log("productInfo id", $scope.productModal.$id);
+
+      $('#productModal').modal(); 
+     
+    }
+
+
+
+ // use routing to pick the selected product
   // if ($routeParams.productSku !== null) {
   //   $scope.product = $scope.store.getProduct($routeParams.productSku);
   // }
@@ -19,7 +35,7 @@ function ShopController($scope, $routeParams, DataService, firebase, $firebaseAr
 
 
 }
-ShopController.$inject=['$scope', '$routeParams','DataService','firebase','$firebaseArray'];
+ShopController.$inject=['$scope', '$routeParams','firebase','$firebaseArray'];
 angular
 	.module('app')
 	.controller('ShopController', ShopController);

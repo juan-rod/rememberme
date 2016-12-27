@@ -35,5 +35,5 @@
 
 
 angular
-	.module('app',['ngRoute','firebase'])
+	.module('app',['ngRoute','firebase','ngCart'])
 	.config(config);

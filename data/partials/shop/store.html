@@ -1,40 +1,33 @@
 <main-nav-bar></main-nav-bar>
 <shop-nav-bar></shop-nav-bar>
-  <div class="store ">
-        <!-- <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 headerItemCount">
-          <a href="#cart" 
-          title="go to shopping cart"
-          ng-disabled="cart.getTotalCount() < 1">
-            <b>{{cart.getTotalCount()}}</b> items,
-            <b>{{cart.getTotalPrice() | currency}}</b>
-          </a>
-        </div> -->
-      <div
-        class="col-lg-4 col-md-4 col-sm-4 col-xs-12 itemDiv " 
-        ng-repeat="item in store | orderBy:'name' | filter:search">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 productDiv ">
-            <a 
-            href="" 
-            ng-click="cart.addItem(product.sku, product.name, product.price, 1)">
-              <img class="product_image" src="{{item.url}}">
-                <div class="product_name">
-                  <!-- <a href="#/products/{{product.sku}}"> -->
-                  <h4>{{item.title}}</h4>
-                  <!-- </a> -->
-                  <h5><b>{{item.price | currency}}</b></h5>
-                <!-- <button class="product-btn_addtocart">
-                ADD TO CART
-                </button> -->
+  <div class="store " ng-controller="ShopController as vm">
+    <div
+      class="col-lg-4 col-md-4 col-sm-4 col-xs-12 itemDiv " 
+      ng-repeat="item in store | orderBy:'name' | filter:search">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 productDiv ">
+          <a
+          href="" 
+          onclick="return false;">
+            <img class="product_image" src="{{item.url}}">
+              <div class="product_name" ng-click="vm.productModal(item.$id)" data-target="#productModal">
+                <h4>{{item.title}}</h4>
+                <h5><b>{{item.price | currency}}</b></h5>
+              </div>
+              <div class="u_product_name ">
+                <div class=" col-lg-7 col-md-7 col-sm-7 col-xs-7 u_product_title "> 
+                  <p>{{item.title}}</p>
                 </div>
-                <div class="u_product_name ">
-                  <div class=" col-lg-8 col-md-8 col-sm-8 col-xs-8 u_product_title "> 
-                    <p>{{item.title}}</p>
-                  </div>
-                  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 u_product_price ">
-                    <p><b>{{item.price | currency}}</b></p>
-                  </div>
+                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 u_product_price ">
+                   <a href="" >
+                   <!--  <button  class="btn btn-warning btn-block product-btn_addtocart" ng-click="vm.addItem(item.$id, item.title, item.price)">
+                     ADD TO CART
+                    </button> -->
+                    <ngcart-addtocart template-url="lib/bower_components/ngCart/template/ngCart/addtocart.html" id="{{item.$id}}" name="{{item.title}}" price="{{item.price}}" quantity="1" quantity-max="5">Add to Cart</ngcart-addtocart>
+                  </a>
                 </div>
-            </a>              
-          </div>
-      </div>
+              </div>
+          </a>              
+        </div>
+    </div>
   </div>
+<product-modal></product-modal>

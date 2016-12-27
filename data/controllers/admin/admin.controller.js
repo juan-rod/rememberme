@@ -53,9 +53,7 @@ function AdminController(firebase, $location, $scope, $firebaseArray) {
 
     function editProduct(id){
     	var productInfo = list.$getRecord(id);
-    	console.log("productInfo:",productInfo);
     	$scope.productToUpdate= productInfo;
-    	console.log("$scope.productToUpdate:",$scope.productToUpdate);
 
     	$('#editModal').modal(); 
     }
